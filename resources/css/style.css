@@ -238,10 +238,13 @@ footer{
     color: #6a149b;
 }
 
-/*@media screen and (max-width: 600px) {*/
-/*    .latest-report{*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        align-items: flex-start;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 600px) {
+    .latest-report{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    main{
+        height: 130vh;
+    }
+}
