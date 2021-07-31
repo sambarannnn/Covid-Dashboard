@@ -96,7 +96,7 @@ function fetchData(country) {
     api_fetch(country);
 }
 
-// update stats
+// update stats -> first remove existing chart then load another
 function updateUI() {
     updateStats();
     axesLinearChart();
@@ -111,7 +111,8 @@ function updateStats() {
 
     const total_deaths = deaths_list[deaths_list.length - 1];
     const new_deaths_cases = total_deaths - deaths_list[deaths_list.length - 2];
-
+    
+    //setting content inside our html
     country_name_element.innerHTML = user_country;
     total_cases_element.innerHTML = total_cases;
     new_cases_element.innerHTML = `+${new_confirmed_cases}`;
@@ -129,11 +130,13 @@ function updateStats() {
 // update the chart
 let my_chart;
 function axesLinearChart() {
+    //if we already have a chart, first remove it before loading another
     if (my_chart) {
         my_chart.destroy();
     }
 
     my_chart = new Chart(ctx, {
+        //boikerplate from chart.js website
         type: "line",
         data: {
             datasets: [
@@ -172,7 +175,7 @@ function axesLinearChart() {
     });
 }
 
-// FORMAT DATES
+// to reformat dates into month and date
 const monthsNames = [
     "Jan",
     "Feb",
