@@ -1,5 +1,5 @@
 # Covid-Dashboard
-A Covid-19 Dashboard for tracking total, recovered and fatal cases by pulling data from postman covid-19 API.
+A Covid-19 Dashboard for tracking global impact of the virus till date and visualising the statis of total, recovered and fatal cases by pulling data from postman covid-19 API.
 
 1. Built using HTML5, CSS3, Vanilla JavaScript and Chart.js library for data visualisation.
 2. Geolocaion API is used for fetching current user's location and setting it as default.
