@@ -1,4 +1,4 @@
-// ALL COUNTRY NAMES WITH THEIR ISO CODE
+// country & iso codes
 let country_list = [
     { name: 'USA', code: 'US' },
     { name: 'Spain', code: 'ES' },
@@ -205,7 +205,7 @@ let country_list = [
     { name: 'China', code: 'CN' }
 ];
 
-//select search country elements
+//selectors
 const search_country_element = document.querySelector(".search-country");
 const country_list_element = document.querySelector(".country-list");
 const change_country_btn = document.querySelector(".change-country");
@@ -234,7 +234,7 @@ function createCountryList() {
 let num_of_ul_lists = 3;
 createCountryList();
 
-//show hide list
+//Fitering acc to search bar
 change_country_btn.addEventListener("click", function () {
     input.value = "";
     resetCountryList();
