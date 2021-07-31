@@ -53,9 +53,7 @@ header{
     font-weight: bold;
     color: #6a149b
 }
-.change-country:hover{
-    color: #6a149b;
-}
+
 nav{
 
 }
@@ -237,7 +235,20 @@ footer{
 .credits a:hover{
     color: #6a149b;
 }
-
+.change-country{
+    border: 1px solid rgba(106, 20, 155, 0.51);
+    border-radius: 2em;
+    /*background-color: rgba(190, 100, 241, 0.45);*/
+    background-color: rgba(121, 117, 117, 0.45);
+    padding: 0 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.change-country:hover{
+    background-color: rgba(190, 100, 241, 0.45);
+    color: #F1F1F1;
+}
 @media screen and (max-width: 600px) {
     .latest-report{
         display: flex;
