@@ -48,14 +48,14 @@ function fetchData(country) {
         method: "GET",
         redirect: "follow",
     };
-
+        //fetch boilerplate from api documentation
     const api_fetch = async (country) => {
-        await fetch(
+        await fetch(//fetching only confirmed cases
             "https://api.covid19api.com/total/country/" + country + "/status/confirmed",
             requestOptions
         )
             .then((res) => {
-                return res.json();
+                return res.json();//parse response to json
             })
             .then((data) => {
                 data.forEach((entry) => {
@@ -64,11 +64,11 @@ function fetchData(country) {
                 });
             });
 
-        await fetch(
+        await fetch(//fetching only recovered cases
             "https://api.covid19api.com/total/country/" + country + "/status/recovered",
             requestOptions
         )
-            .then((res) => {
+            .then((res) => {//parse response to json
                 return res.json();
             })
             .then((data) => {
@@ -77,11 +77,11 @@ function fetchData(country) {
                 });
             });
 
-        await fetch(
+        await fetch(//fetching only death cases
             "https://api.covid19api.com/total/country/" + country + "/status/deaths",
             requestOptions
         )
-            .then((res) => {
+            .then((res) => {//parse response to json
                 return res.json();
             })
             .then((data) => {
